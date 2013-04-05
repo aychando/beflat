@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="app/renderer.js"></script>
+    <script type="text/javascript" src="app/cell.js"></script>
+    <script type="text/javascript" src="app/board.js"></script>
+    <script type="text/javascript" src="app/algorithms.js"></script>
+    <script type="text/javascript" src="app/game.js"></script>
+    <script type="text/javascript" src="app/beflat.js"></script>
+    <style>
+      #container {
+        width: 400px;
+        margin: 50px auto;
+      }
+
+      #container h1 {
+        color: rgba(0,0,0,0.7);
+        font-family: Helvetica, Arial;
+        text-align:right;
+      }
+
+      #game {
+        border: 5px solid #112233;
+      }
+
+      #restart {
+        text-decoration: none;
+        color: rgba(0,0,0,0.7);
+        margin-top: 10px;
+        display: block;
+      }
+
+      #remove {
+        text-decoration: none;
+        color: rgba(0,0,0,0.7);
+        margin-top: 10px;
+        display: block;
+      }
+
+      #restart:hover {
+        color: rgba(0,0,0,0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1><span id="score">0</span></h1>
+      <canvas id="game">
+      </canvas>
+      <a id="restart" href="">Restart</a>
+    </div>
+  </body>
+</html>
+
+
+
