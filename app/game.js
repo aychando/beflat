@@ -124,14 +124,25 @@ var Game = {
     }
     
     if(this.selectedCells.length == 2) {
-      
       this.board.switchCells(this.selectedCells[0],this.selectedCells[1]);
-      this.checkForMatches(this.drawGame.bind(this));
+      if(Algorithms.validMove(this.board,this.selectedCells)) {
 
-      setTimeout(function() {
-        this.clearSelection();
-        this.drawGame();
-      }.bind(this),350);
+        this.checkForMatches(this.drawGame.bind(this));
+
+        setTimeout(function() {
+          this.clearSelection();
+          this.drawGame();
+        }.bind(this),350);
+      }
+      else {
+        setTimeout(function() {
+          console.log("I GOT HERE")
+          this.board.switchCells(this.selectedCells[0],this.selectedCells[1]);
+          this.clearSelection();
+          this.drawGame();
+        }.bind(this),350);
+      }
+      
     }
     this.drawGame();
   },
