@@ -136,7 +136,6 @@ var Game = {
       }
       else {
         setTimeout(function() {
-          console.log("I GOT HERE")
           this.board.switchCells(this.selectedCells[0],this.selectedCells[1]);
           this.clearSelection();
           this.drawGame();
